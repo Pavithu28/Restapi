@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "f880b7c3-377b-4700-9e12-f50d0ecc7503",
+		"name": "Servicenow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Incidents",
+			"item": [
+				{
+					"name": "IncidentCreation",
+					"item": [
+						{
+							"name": "https://dev117847.service-now.com/api/now/table/incident",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "jqIO1JKv4Ezc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"short_description\": \"pm created\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://dev117847.service-now.com/api/now/table/incident",
+									"protocol": "https",
+									"host": [
+										"dev117847",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"now",
+										"table",
+										"incident"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://dev117847.service-now.com/api/now/table/incident",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "jqIO1JKv4Ezc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dev117847.service-now.com/api/now/table/incident",
+									"protocol": "https",
+									"host": [
+										"dev117847",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"now",
+										"table",
+										"incident"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://dev117847.service-now.com/api/now/table/incident",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "jqIO1JKv4Ezc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://dev117847.service-now.com/api/now/table/incident",
+									"protocol": "https",
+									"host": [
+										"dev117847",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"now",
+										"table",
+										"incident"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "jqIO1JKv4Ezc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://dev117847.service-now.com/api/now/table/incident/9d3c1197c611228701cd1d94bc32d76d",
+									"protocol": "https",
+									"host": [
+										"dev117847",
+										"service-now",
+										"com"
+									],
+									"path": [
+										"api",
+										"now",
+										"table",
+										"incident",
+										"9d3c1197c611228701cd1d94bc32d76d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "jqIO1JKv4Ezc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev117847.service-now.com/api/now/table/incident",
+							"protocol": "https",
+							"host": [
+								"dev117847",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://dev117847.service-now.com/api/now/table/incident",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "jqIO1JKv4Ezc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://dev117847.service-now.com/api/now/table/incident",
+							"protocol": "https",
+							"host": [
+								"dev117847",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "jqIO1JKv4Ezc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev117847.service-now.com/api/now/table/incident",
+							"protocol": "https",
+							"host": [
+								"dev117847",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "jqIO1JKv4Ezc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"short_description\":\"crested pm\"}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dev117847.service-now.com/api/now/table/incident/46f1784ba9fe19810018aa27fbb23482",
+							"protocol": "https",
+							"host": [
+								"dev117847",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident",
+								"46f1784ba9fe19810018aa27fbb23482"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
