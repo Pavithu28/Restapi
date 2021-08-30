@@ -1,0 +1,31 @@
+package Restapi;
+
+import java.io.File;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+
+public class Rest_put_path {
+	@Test
+	public void getPut() {
+		
+	RestAssured.baseURI="https://dev117847.service-now.com/api/now/table/incident";
+	
+	RestAssured.authentication=RestAssured.basic("admin", "jqIO1JKv4Ezc");
+	File file = new File("*./data/createinci.json");
+	Response response = RestAssured
+			.given()
+			.contentType(ContentType.JSON)
+			
+			.body("\"short_description\":\"inci cre\",\"category\":\"software\"}")
+			.pathParam("sysid","0d1d62841b5a3010193f6464604bcb65")
+			.patch("inident/{sysid}");
+	response.prettyPrint();
+	System.out.println(response.statusCode());
+
+}
+
+}
